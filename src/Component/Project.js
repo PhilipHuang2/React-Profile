@@ -1,4 +1,5 @@
-import DogRater from "./images/DogRater.PNG";
+import GitHub from './images/GitHub.png';
+
 export default function Project(props) {
   return (
     <div className="card mx-auto my-2" style={{ width: "30rem" }}>
@@ -7,7 +8,11 @@ export default function Project(props) {
         <h3 className="text-center card-title">{props.title}</h3>
 
         <p className="text-center card-text">
-          <a href="https://fetchdograter.herokuapp.com/" className="btn btn-primary">Let's Go</a>
+        <a href={props.github}>
+              <img src={GitHub} alt="Link to the GitHub repository"/>
+            </a>
+            {" "}
+          <a href={props.link} className="btn btn-primary">Check it out!</a>
         </p>
       </div>
     </div>
